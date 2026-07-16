@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="dark"] {
+  --background: #0b0f19;
+  --surface: #111827;
+  --surface-2: #161f33;
+  --foreground: #e5e7eb;
+  --muted: #94a3b8;
+  --border: #1f2a44;
+  --accent: #6366f1;
+  --accent-2: #22d3ee;
+}
+
+[data-theme="light"] {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #eef2f7;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+  --accent-2: #0891b2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Subtle radial glow behind the hero */
+.hero-glow {
+  background:
+    radial-gradient(60% 50% at 20% 0%, rgba(99, 102, 241, 0.18) 0%, transparent 70%),
+    radial-gradient(50% 40% at 90% 10%, rgba(34, 211, 238, 0.14) 0%, transparent 70%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Force a clean black-on-white layout when printing the résumé */
+@media print {
+  :root {
+    --background: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --foreground: #111827;
+    --muted: #374151;
+    --border: #d1d5db;
+  }
+
+  body {
+    background: #ffffff;
+    color: #111827;
+  }
+}

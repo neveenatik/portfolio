@@ -71,11 +71,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Invoicing (PostNL)",
+    title: "Invoicing Tool",
+    role: "Private",
     description:
-      "A JavaScript tool for generating and managing invoices, streamlining a repetitive billing workflow.",
-    tags: ["JavaScript", "Automation"],
-    repo: "https://github.com/neveenatik/invoicing-postnl",
+      "A JavaScript tool for generating and managing invoices, streamlining a repetitive billing workflow for a shipping/logistics use case. Private client project.",
+    tags: ["JavaScript", "Automation", "Private"],
   },
   {
     title: "Flip-Flop",

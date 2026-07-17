@@ -62,9 +62,9 @@ export const projects: Project[] = [
   {
     title: "Sign Language Translator",
     description:
-      "An application that translates sign language, exploring computer vision and interactive UI to make communication more accessible.",
-    tags: ["JavaScript", "Machine Learning", "UI"],
-    repo: "https://github.com/neveenatik",
+      "Real-time American Sign Language → text translator: MediaPipe hand tracking feeds a TensorFlow gesture classifier with temporal smoothing, wrapped in a Streamlit UI. Includes training scripts and optimization notebooks (~90% accuracy).",
+    tags: ["Python", "TensorFlow", "MediaPipe", "Streamlit", "ML"],
+    repo: "https://github.com/neveenatik/sign-language-translator",
     featured: true,
   },
   {

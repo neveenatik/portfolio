@@ -1,4 +1,5 @@
 import { projects } from "@/lib/data";
+import Link from "next/link";
 import Section from "./Section";
 import { GitHubIcon, ExternalIcon } from "./icons";
 
@@ -27,17 +28,26 @@ export default function Projects() {
                     <GitHubIcon className="h-5 w-5" />
                   </a>
                 )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`${project.title} live site`}
-                    className="transition-colors hover:text-foreground"
-                  >
-                    <ExternalIcon className="h-5 w-5" />
-                  </a>
-                )}
+                {project.live &&
+                  (project.live.startsWith("/") ? (
+                    <Link
+                      href={project.live}
+                      aria-label={`${project.title} live demo`}
+                      className="transition-colors hover:text-foreground"
+                    >
+                      <ExternalIcon className="h-5 w-5" />
+                    </Link>
+                  ) : (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${project.title} live site`}
+                      className="transition-colors hover:text-foreground"
+                    >
+                      <ExternalIcon className="h-5 w-5" />
+                    </a>
+                  ))}
               </div>
             </div>
 

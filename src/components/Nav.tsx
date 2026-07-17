@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { profile } from "@/lib/data";
 import ThemeToggle from "./ThemeToggle";
 
@@ -33,12 +34,12 @@ export default function Nav() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/resume"
             className="hidden rounded-full border border-accent/40 px-4 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-accent/10 md:inline-block"
           >
             Resume
-          </a>
+          </Link>
           <ThemeToggle />
           <button
             type="button"
@@ -68,13 +69,13 @@ export default function Nav() {
             </li>
           ))}
           <li>
-            <a
+            <Link
               href="/resume"
               onClick={() => setOpen(false)}
               className="block py-2 text-muted transition-colors hover:text-foreground"
             >
               Resume
-            </a>
+            </Link>
           </li>
         </ul>
       )}

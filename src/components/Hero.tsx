@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile } from "@/lib/data";
 import { GitHubIcon, LinkedInIcon, MailIcon, ArrowIcon } from "./icons";
 
@@ -33,12 +34,12 @@ export default function Hero() {
             <MailIcon className="h-4 w-4" />
             Contact me
           </a>
-          <a
+          <Link
             href="/resume"
             className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-accent/50 hover:bg-surface"
           >
             Résumé
-          </a>
+          </Link>
         </div>
 
         <div className="mt-8 flex items-center gap-5 text-muted">

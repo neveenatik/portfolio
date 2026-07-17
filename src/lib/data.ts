@@ -48,6 +48,7 @@ export type Project = {
   repo?: string;
   live?: string;
   featured?: boolean;
+  role?: string;
 };
 
 export const projects: Project[] = [
@@ -61,10 +62,12 @@ export const projects: Project[] = [
   },
   {
     title: "Sign Language Translator",
+    role: "Developer",
     description:
-      "Real-time American Sign Language → text translator: MediaPipe hand tracking feeds a TensorFlow gesture classifier with temporal smoothing, wrapped in a Streamlit UI. Includes training scripts and optimization notebooks (~90% accuracy).",
+      "A real-time American Sign Language → text translator (MediaPipe hand tracking + a TensorFlow gesture classifier, Streamlit UI) with live browser-webcam and video-upload modes. I built and deployed it, and reworked the hand-landmark normalization to be wrist-relative and scale-invariant — making recognition robust to how far the hand is from the camera.",
     tags: ["Python", "TensorFlow", "MediaPipe", "Streamlit", "ML"],
     repo: "https://github.com/neveenatik/sign-language-translator",
+    live: "https://sign-language-translator-fscrelmm4dwim24yq5vrgh.streamlit.app/",
     featured: true,
   },
   {

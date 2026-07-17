@@ -15,7 +15,14 @@ export default function Projects() {
             }`}
           >
             <div className="mb-3 flex items-start justify-between gap-3">
-              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+                {project.role && (
+                  <span className="w-fit rounded-full bg-surface-2 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wide text-muted">
+                    {project.role}
+                  </span>
+                )}
+              </div>
               <div className="flex shrink-0 items-center gap-3 text-muted">
                 {project.repo && (
                   <a

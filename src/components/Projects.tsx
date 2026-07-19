@@ -6,15 +6,15 @@ import { GitHubIcon, ExternalIcon } from "./icons";
 export default function Projects() {
   return (
     <Section id="projects" eyebrow="03." title="Projects">
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-4 sm:gap-5 sm:grid-cols-2">
         {projects.map((project) => (
           <article
             key={project.title}
-            className={`group flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/40 ${
+            className={`group flex flex-col rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 ${
               project.featured ? "sm:col-span-1" : ""
             }`}
           >
-            <div className="mb-3 flex items-start justify-between gap-3">
+            <div className="mb-2.5 flex items-start justify-between gap-3">
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold">{project.title}</h3>
                 {project.role && (
@@ -62,7 +62,7 @@ export default function Projects() {
               {project.description}
             </p>
 
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
                 <li
                   key={tag}

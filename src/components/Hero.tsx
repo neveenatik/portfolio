@@ -6,20 +6,20 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="hero-glow pointer-events-none absolute inset-0" />
-      <div className="mx-auto flex min-h-[80vh] max-w-5xl flex-col justify-center px-6 pt-28 pb-16">
-        <p className="mb-4 font-mono text-sm text-accent-2">Hi, my name is</p>
+      <div className="mx-auto flex min-h-[52vh] max-w-5xl flex-col justify-center px-6 pt-24 pb-3 sm:min-h-[56vh]">
+        <p className="mb-3 font-mono text-sm text-accent-2">Hi, my name is</p>
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
           {profile.name}
         </h1>
-        <h2 className="mt-3 text-2xl font-semibold text-muted sm:text-4xl">
+        <h2 className="mt-2 text-2xl font-semibold text-muted sm:text-4xl">
           <span className="gradient-text">{profile.role}</span>
         </h2>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
           {profile.tagline}
         </p>
         <p className="mt-2 text-sm text-muted">📍 {profile.location}</p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-4">
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <a
             href="#projects"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-transform hover:-translate-y-0.5"
@@ -42,7 +42,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="mt-8 flex items-center gap-5 text-muted">
+        <div className="mt-6 flex items-center gap-4 text-muted">
           <a href={profile.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-foreground">
             <GitHubIcon />
           </a>

@@ -9,8 +9,8 @@ type Props = {
 
 export default function Section({ id, title, eyebrow, children }: Props) {
   return (
-    <section id={id} className="mx-auto max-w-5xl scroll-mt-20 px-6 py-12 sm:py-16">
-      <div className="mb-8 sm:mb-10">
+    <section id={id} className="mx-auto max-w-5xl scroll-mt-20 px-6 py-10 sm:py-12">
+      <div className="mb-6 sm:mb-7">
         {eyebrow && (
           <p className="mb-2 font-mono text-sm text-accent-2">{eyebrow}</p>
         )}

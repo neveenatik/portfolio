@@ -4,13 +4,13 @@ import Section from "./Section";
 export default function Skills() {
   return (
     <Section id="skills" eyebrow="02." title="Skills & tools">
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-4 sm:gap-5 sm:grid-cols-2">
         {skillGroups.map((group) => (
           <div
             key={group.title}
-            className="rounded-xl border border-border bg-surface p-6"
+            className="rounded-xl border border-border bg-surface p-5"
           >
-            <h3 className="mb-4 text-sm font-semibold text-accent-2">
+            <h3 className="mb-3 text-sm font-semibold text-accent-2">
               {group.title}
             </h3>
             <ul className="flex flex-wrap gap-2">

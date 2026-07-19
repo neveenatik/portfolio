@@ -11,7 +11,7 @@ export const profile = {
   about:
     "I'm a software engineer who enjoys turning ideas into clean, maintainable products. " +
     "I work across the stack — from React and Next.js front-ends to Node.js services with REST and GraphQL APIs, " +
-    "backed by SQL and Postgres. I care about thoughtful state management, good developer experience, and shipping things that hold up in production.",
+    "backed by SQL and Postgres. I also integrate AI/ML capabilities into web products — such as real-time prediction pipelines and model-powered features — and focus on making them reliable in real user workflows. I care about thoughtful state management, good developer experience, and shipping things that hold up in production.",
   email: "nevine.atike@gmail.com",
   socials: {
     github: "https://github.com/neveenatik",
@@ -39,6 +39,16 @@ export const skillGroups: SkillGroup[] = [
     title: "Data",
     items: ["SQL", "PostgreSQL", "Supabase", "Data modeling"],
   },
+  {
+    title: "AI / ML Integration",
+    items: [
+      "Applied machine learning",
+      "Model integration in web apps",
+      "MediaPipe + TensorFlow pipelines",
+      "Real-time inference workflows",
+      "Feature engineering for robustness",
+    ],
+  },
 ];
 
 export type Project = {
@@ -53,18 +63,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Qur'an Circle Attendance Bot",
+    title: "Learning Circles Attendance Bot",
     description:
-      "A Telegram bot (Telegraf) that tracks attendance for live and offline study sessions. Arabic UI, Supabase/Postgres state, and a Vercel serverless webhook deployment.",
-    tags: ["Node.js", "Telegraf", "Supabase", "Postgres", "Vercel"],
+      "A Telegram bot (Telegraf) that tracks attendance for live and offline learning circles. It also includes a companion website built with Next.js, localized in Arabic and English. Powered by Supabase/Postgres state with a Vercel serverless webhook deployment.",
+    tags: ["Next.js", "Node.js", "Telegraf", "Supabase", "Postgres", "Vercel"],
     repo: "https://github.com/neveenatik",
+    live: "https://deen-circles-web.vercel.app",
     featured: true,
   },
   {
     title: "Sign Language Translator",
     role: "Developer",
     description:
-      "A real-time American Sign Language → text translator (MediaPipe hand tracking + a TensorFlow gesture classifier, Streamlit UI) with live browser-webcam and video-upload modes. I built and deployed it, and reworked the hand-landmark normalization to be wrist-relative and scale-invariant — making recognition robust to how far the hand is from the camera.",
+      "A real-time American Sign Language to text web app that detects hand landmarks with MediaPipe and classifies gestures with a TensorFlow model. It supports both live webcam input and uploaded videos through a Streamlit interface, then returns the predicted letter/word output in real time. I built and deployed the full pipeline and improved landmark normalization to be wrist-relative and scale-invariant, which made predictions more stable across different camera distances and hand positions.",
     tags: ["Python", "TensorFlow", "MediaPipe", "Streamlit", "ML"],
     repo: "https://github.com/neveenatik/sign-language-translator",
     live: "https://sign-language-translator-fscrelmm4dwim24yq5vrgh.streamlit.app/",
@@ -92,6 +103,7 @@ export const projects: Project[] = [
       "An interactive quiz application built with JavaScript, letting users answer questions and track their score.",
     tags: ["JavaScript", "Quiz"],
     repo: "https://github.com/neveenatik/Quizes",
+    live: "https://neveenatik.github.io/Quizes/",
   },
   {
     title: "HackYourForecast",

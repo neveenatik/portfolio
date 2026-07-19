@@ -60,7 +60,7 @@ export default function Hero() {
         <div className="order-2 mx-auto mt-1 w-[220px] sm:w-[260px] md:order-1 md:mx-0 md:mt-0 md:w-full md:max-w-[300px] md:justify-self-start">
           <div className="rounded-[1.75rem] bg-gradient-to-br from-accent/20 via-transparent to-accent-2/20 p-1">
             <Image
-              src="/cv-photo.webp"
+              src="cv-photo.webp"
               alt="Portrait of Neveen Atik"
               width={1400}
               height={1471}

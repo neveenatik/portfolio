@@ -17,13 +17,13 @@ export default function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2.5 sm:px-6">
         <a href="#top" className="font-mono text-sm font-semibold tracking-tight">
           {profile.name.split(" ")[0]}
           <span className="text-accent">.</span>
         </a>
 
-        <ul className="hidden gap-7 text-sm text-muted md:flex">
+        <ul className="hidden gap-6 text-sm text-muted md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="transition-colors hover:text-foreground">
@@ -56,7 +56,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-border/60 px-6 py-2.5 text-sm md:hidden">
+        <ul className="flex flex-col gap-1 border-t border-border/60 px-5 py-2.5 text-sm sm:px-6 md:hidden">
           {links.map((l) => (
             <li key={l.href}>
               <a

@@ -10,7 +10,7 @@ export default function Projects() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className={`group flex flex-col rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 ${
+            className={`group flex flex-col rounded-xl border border-border bg-surface p-4 sm:p-5 transition-colors hover:border-accent/40 ${
               project.featured ? "sm:col-span-1" : ""
             }`}
           >

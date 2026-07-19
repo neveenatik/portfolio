@@ -5,7 +5,7 @@ import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
 export default function Contact() {
   return (
     <Section id="contact" eyebrow="04." title="Get in touch">
-      <div className="rounded-2xl border border-border bg-surface p-6 text-center sm:p-8">
+      <div className="rounded-2xl border border-border bg-surface p-5 text-center sm:p-6">
         <p className="mx-auto max-w-lg text-base leading-relaxed text-muted">
           I&apos;m open to new opportunities and interesting projects. Whether you
           have a question or just want to say hi, my inbox is always open.

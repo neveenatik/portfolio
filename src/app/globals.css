@@ -61,24 +61,17 @@ body {
   color: transparent;
 }
 
-/* Force a clean black-on-white layout when printing the résumé */
+/* Preserve active theme when printing/exporting PDF */
 @media print {
-  :root {
-    --background: #ffffff;
-    --surface: #ffffff;
-    --surface-2: #ffffff;
-    --foreground: #111827;
-    --muted: #374151;
-    --border: #d1d5db;
-  }
-
   body {
-    background: #ffffff;
-    color: #111827;
+    background: var(--background);
+    color: var(--foreground);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   a {
-    color: #111827;
+    color: var(--foreground);
     text-decoration: underline;
     text-underline-offset: 2px;
   }

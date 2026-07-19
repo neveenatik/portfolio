@@ -10,6 +10,7 @@ import {
   hobbies,
 } from "@/lib/data";
 import PrintButton from "@/components/PrintButton";
+import ResumePrintTip from "@/components/ResumePrintTip";
 import ThemeToggle from "@/components/ThemeToggle";
 import { ArrowIcon } from "@/components/icons";
 
@@ -21,18 +22,21 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <main className="mx-auto w-full max-w-3xl px-6 pt-28 pb-20 print:pt-8">
-      <div className="mb-8 flex items-center justify-between gap-4 print:hidden">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
-        >
-          <ArrowIcon className="h-4 w-4 rotate-180" />
-          Back to portfolio
-        </Link>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <PrintButton />
+      <div className="mb-8 print:hidden">
+        <div className="flex items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+          >
+            <ArrowIcon className="h-4 w-4 rotate-180" />
+            Back to portfolio
+          </Link>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <PrintButton />
+          </div>
         </div>
+        <ResumePrintTip />
       </div>
 
       <article className="rounded-2xl border border-border bg-surface p-8 print:border-0 print:bg-transparent print:p-0">

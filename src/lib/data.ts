@@ -2,18 +2,20 @@
 
 export const profile = {
   name: "Neveen Atik",
-  role: "Software Engineer",
+  role: "Full-Stack Engineer",
   location: "Amsterdam, Netherlands",
+  phone: "0687646603",
   // Short one-liner shown under the name in the hero.
   tagline:
-    "Full-stack engineer building reliable web apps with React, Next.js and Node.js.",
+    "Full-stack engineer building scalable web applications with React, Next.js, Node.js, and GraphQL.",
   // Longer paragraph for the About section.
   about:
-    "I'm a software engineer who enjoys turning ideas into clean, maintainable products. " +
-    "I work across the stack — from React and Next.js front-ends to Node.js services with REST and GraphQL APIs, " +
-    "backed by SQL and Postgres. I also integrate AI/ML capabilities into web products — such as real-time prediction pipelines and model-powered features — and focus on making them reliable in real user workflows. I care about thoughtful state management, good developer experience, and shipping things that hold up in production.",
+    "I am a full-stack software engineer with over six years of experience building clean, reliable products. " +
+    "I work across React and Next.js frontends and Node.js services with REST and GraphQL APIs, backed by SQL and PostgreSQL. " +
+    "I am a fast learner and enjoy picking up new tools when they solve real product needs, including practical AI/ML integrations. I care about thoughtful state management, strong developer experience, and shipping software that holds up in production.",
   email: "nevine.atike@gmail.com",
   socials: {
+    portfolio: "https://neveenatik.github.io/portfolio/",
     github: "https://github.com/neveenatik",
     linkedin: "https://www.linkedin.com/in/neveen-atik",
     twitter: "https://twitter.com/neveen_atik",
@@ -25,31 +27,30 @@ export type SkillGroup = { title: string; items: string[] };
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML & CSS", "Tailwind CSS"],
+    items: ["JavaScript", "TypeScript", "ReactJS", "NextJS", "React hooks"],
   },
   {
-    title: "State & Data Fetching",
-    items: ["Redux", "MobX", "React Query", "Apollo / GraphQL client"],
+    title: "State Management",
+    items: ["Redux", "MobX", "State management frameworks"],
   },
   {
     title: "Backend",
-    items: ["Node.js", "REST APIs", "GraphQL APIs", "Express", "Serverless"],
+    items: ["Node.js", "RESTful APIs", "GraphQL", "Kafka", "Serverless"],
   },
   {
-    title: "Data",
-    items: ["SQL", "PostgreSQL", "Supabase", "Data modeling"],
+    title: "Databases",
+    items: ["DynamoDB", "PostgresDB"],
   },
   {
-    title: "AI / ML Integration",
-    items: [
-      "Applied machine learning",
-      "Model integration in web apps",
-      "MediaPipe + TensorFlow pipelines",
-      "Real-time inference workflows",
-      "Feature engineering for robustness",
-    ],
+    title: "Testing",
+    items: ["Jest", "Playwright", "Cypress"],
   },
 ];
+
+export const languages = ["Arabic", "English", "Dutch", "French"] as const;
+
+export const hobbies =
+  "Continuous learning of anything, watching sports, playing video games, painting.";
 
 export type Project = {
   title: string;
@@ -129,23 +130,41 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Software Engineer",
+    role: "Full-Stack Software Engineer",
     company: "Abcam",
-    period: "Present",
-    location: "Amsterdam, NL",
+    period: "Sept 2022 - Present",
+    location: "Amsterdam",
     points: [
-      "Build and maintain full-stack web features with React, Next.js and Node.js.",
-      "Design and consume REST and GraphQL APIs backed by SQL / PostgreSQL.",
-      "Collaborate in a cross-functional team, focusing on maintainable, well-tested code.",
+      "Developed RESTful and GraphQL services powered by Kafka for e-commerce applications.",
+      "Worked with the team to migrate from Apollo Server Gateway to a lightweight serverless solution using AWS Lambda and API Gateway to handle GraphQL federation and routing without vendor lock-in, reducing costs after Apollo Gateway became monetized.",
+      "Helped improve integrated third-party services such as Avalara and Talon.One.",
+      "Integrated micro-frontends with AEM to enhance website functionality.",
+      "Delivered clean, efficient code while optimizing performance and bundle size.",
+      "Collaborated with cross-functional teams to refine user experience and application design.",
     ],
   },
   {
-    role: "Front-end / Full-stack Developer",
-    company: "Freelance & Open Source",
-    period: "Earlier",
+    role: "Frontend Software Engineer",
+    company: "DAZN",
+    period: "Jun 2019 - Sept 2022",
+    location: "Amsterdam",
     points: [
-      "Delivered React applications with Redux, MobX and React Query for state and data fetching.",
-      "Built small products and tools (invoicing automation, browser games, quiz apps).",
+      "Developed and maintained scalable, cross-browser applications for millions of users.",
+      "Integrated multiple global payment solutions such as Adyen, PayPal, Apple Pay, and gift cards to enhance transaction experiences.",
+      "Collaborated with teams to implement micro-frontend architecture using React.",
+      "Executed testing strategies with Jest, Cypress, and Playwright to ensure software quality.",
+      "Optimized performance metrics through monitoring tools like GTM, New Relic, and Sentry.",
+    ],
+  },
+  {
+    role: "Contributor / Mentor",
+    company: "Hack Your Future",
+    period: "Dec 2018 - Nov 2019",
+    location: "Amsterdam",
+    points: [
+      "Collaborated with fellow students on HackYourForecast, a weather API for developers that aggregates global weather data using technologies such as HTML scraping, Node.js, chart libraries, and EJS.",
+      "Took primary responsibility for fetching and normalizing data, as well as querying and managing database interactions.",
+      "After graduation, supported the community as a mentor, conducting 1:1 sessions when needed and reviewing homework assignments to help students progress.",
     ],
   },
 ];
@@ -159,10 +178,40 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    title: "Full-stack Web Development",
-    org: "HackYourFuture",
-    period: "Bootcamp",
-    note: "Intensive program covering JavaScript, React, Node.js and databases.",
+    title: "Full-Stack Web Development Bootcamp",
+    org: "Hack Your Future, Amsterdam",
+    period: "Mar 2018 - Nov 2018",
+    note: "Intensive course in web development, learning front-end and back-end technologies such as ReactJS, MobX, NodeJS, and Git, as well as teamwork and feedback practices.",
+  },
+  {
+    title: "Bachelor",
+    org: "Damascus University, Damascus",
+    period: "Sept 2001 - Aug 2008",
+    note: "Bachelor degree in Economics and Trade, majored in Banking and Insurance.",
+  },
+];
+
+export type Internship = {
+  role: string;
+  company: string;
+  period: string;
+  location?: string;
+  points: string[];
+};
+
+export const internships: Internship[] = [
+  {
+    role: "Frontend Developer",
+    company: "Booking.com",
+    period: "Jan 2019 - Apr 2019",
+    location: "Amsterdam",
+    points: [
+      "Collaborated with fellow trainees on multiple projects, including building a website from design mock-ups.",
+      "Implemented features such as data fetching, search functionality, user authentication, and account management using ReactJS and Redux for state management.",
+      "Developed small interactive projects in vanilla JavaScript, including games such as flip-flap cards, slot machines, and drag-and-drop puzzles.",
+      "Strengthened soft skills through agile methodologies by participating in stand-ups, backlog refinement, sprint planning, retrospectives, and Scrum ceremonies.",
+      "Engaged with stakeholders and improved public speaking through team presentations.",
+    ],
   },
 ];
 

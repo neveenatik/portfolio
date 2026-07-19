@@ -76,4 +76,10 @@ body {
     background: #ffffff;
     color: #111827;
   }
+
+  a {
+    color: #111827;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 }

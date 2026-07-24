@@ -7,8 +7,22 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="hero-glow pointer-events-none absolute inset-0" />
-      <div className="mx-auto grid min-h-[46vh] max-w-6xl items-center gap-8 px-5 pt-20 pb-2 sm:min-h-[50vh] sm:px-6 md:grid-cols-[260px_1fr] md:gap-10 lg:grid-cols-[300px_1fr]">
-        <div className="order-1 md:order-2">
+      <div className="mx-auto block min-h-[46vh] max-w-6xl px-5 pt-24 pb-2 sm:min-h-[50vh] sm:px-6 md:grid md:grid-cols-[260px_1fr] md:items-start md:gap-10 md:pt-32 lg:grid-cols-[300px_1fr]">
+        <div className="float-left mr-4 mb-2 w-[30%] md:float-none md:order-1 md:mx-0 md:mr-0 md:mb-0 md:w-full md:max-w-[300px] md:justify-self-start">
+          <div className="rounded-[1.75rem] bg-gradient-to-br from-accent/20 via-transparent to-accent-2/20 p-1">
+            <Image
+              src="cv-photo.webp"
+              alt="Portrait of Neveen Atik"
+              width={1400}
+              height={1471}
+              priority
+              unoptimized
+              className="h-auto w-full rounded-[1.5rem] border border-border/70 bg-surface shadow-xl"
+            />
+          </div>
+        </div>
+
+        <div className="md:order-2">
           <p className="mb-2.5 font-mono text-sm text-accent-2">Hi, my name is</p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
             {profile.name}
@@ -54,20 +68,6 @@ export default function Hero() {
             <a href={`mailto:${profile.email}`} aria-label="Email" className="transition-colors hover:text-foreground">
               <MailIcon />
             </a>
-          </div>
-        </div>
-
-        <div className="order-2 mx-auto mt-1 w-[220px] sm:w-[260px] md:order-1 md:mx-0 md:mt-0 md:w-full md:max-w-[300px] md:justify-self-start">
-          <div className="rounded-[1.75rem] bg-gradient-to-br from-accent/20 via-transparent to-accent-2/20 p-1">
-            <Image
-              src="cv-photo.webp"
-              alt="Portrait of Neveen Atik"
-              width={1400}
-              height={1471}
-              priority
-              unoptimized
-              className="h-auto w-full rounded-[1.5rem] border border-border/70 bg-surface shadow-xl"
-            />
           </div>
         </div>
       </div>

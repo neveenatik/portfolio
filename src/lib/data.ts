@@ -7,10 +7,10 @@ export const profile = {
   phone: "0687646603",
   // Short one-liner shown under the name in the hero.
   tagline:
-    "Full-stack engineer building scalable web applications with React, Next.js, Node.js, and GraphQL.",
+    "Building scalable web applications with React, Next.js, Node.js, and GraphQL.",
   // Longer paragraph for the About section.
   about:
-    "I am a full-stack software engineer with over six years of experience building clean, reliable products. " +
+    "I am a software engineer with over six years of experience building clean, reliable products. " +
     "I work across React and Next.js frontends and Node.js services with REST and GraphQL APIs, backed by SQL and PostgreSQL. " +
     "I am a fast learner and enjoy picking up new tools when they solve real product needs, including practical AI/ML integrations. I care about thoughtful state management, strong developer experience, and shipping software that holds up in production.",
   email: "nevine.atike@gmail.com",
